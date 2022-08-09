@@ -17,7 +17,7 @@ public class Mesa {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private BigInteger id_mesa;
+	private BigInteger mesa_id;
 	
 	@Column(name = "numero_mesa")
 	private BigInteger numero;
@@ -33,6 +33,6 @@ public class Mesa {
 	
 	@OneToMany(mappedBy = "mesa")
 	@Column(name = "mesa_pedido")
-	private List<Pedido> orden;
+	private List<Pedido> pedido;
 
 }

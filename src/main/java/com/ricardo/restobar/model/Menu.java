@@ -1,8 +1,11 @@
 package com.ricardo.restobar.model;
 
 import java.math.BigInteger;
+import java.util.List;
 
 import javax.persistence.*;
+
+import com.ricardo.restobar.model.Comida.Comida;
 
 import lombok.Data;
 
@@ -13,11 +16,9 @@ public class Menu {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private BigInteger id;
+	private BigInteger menu_id;
 	
-	private String titulo;
-	
-	private String descripcion;
-	
-	private BigInteger valor;
+	@Column(name = "menu_plato")
+	private List<Comida> plato;
+
 }
